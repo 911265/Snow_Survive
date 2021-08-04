@@ -1,0 +1,5 @@
+name: snow_survive
+main: com.gmail.kidjim4011.snow_survive.Main
+version: 1.17.01
+description: 在玩家位於低溫(陰暗)地區時會給予傷害與警告的插件。目前的設計是在亮度6以下就會開始倒數十秒，假如玩家仍處在低溫環境就會給予狀態效果。
+author: LLC
