@@ -5,12 +5,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.HashMap;
-import java.util.UUID;
-
 public class Main extends JavaPlugin implements Listener {
 
-    private HashMap <UUID, Integer> idlist = new HashMap();
     @Override
     public void onEnable() { getServer().getPluginManager().registerEvents(this, this); }
 
@@ -21,5 +17,6 @@ public class Main extends JavaPlugin implements Listener {
                 Temperaturedetect.getTemp(),
                 Temperaturedetect.getState(),
                 Temperaturedetect.getSuggest());
+        if (Integer.getInteger(Temperaturedetect.getTemp()) > 10) {}
     }
 }

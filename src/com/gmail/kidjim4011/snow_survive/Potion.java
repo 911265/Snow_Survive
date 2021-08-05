@@ -7,6 +7,6 @@ import org.bukkit.potion.PotionEffectType;
 public class Potion {
 
     public static void apply(Player player) {
-        player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 10, 1, true));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 10, 1, true));
     }
 }
