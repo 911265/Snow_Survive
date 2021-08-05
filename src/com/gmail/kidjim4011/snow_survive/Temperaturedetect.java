@@ -10,7 +10,7 @@ public class Temperaturedetect {
     private static String suggest;
     public static String getState() { return state; }
     public static String getSuggest() { return suggest; }
-    public static String getTemp() { String tempe = String.valueOf(temp); return tempe; }
+    public static int getTemp() { return (int) temp; }
 
     public static void getScore(Location location) {
 
