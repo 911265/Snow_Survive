@@ -1,5 +1,6 @@
 package com.gmail.kidjim4011.snow_survive;
 
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
@@ -12,11 +13,12 @@ public class Main extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onMove(PlayerMoveEvent event) {
+        Player player = event.getPlayer();
         Temperaturedetect.getScore(event.getTo());
-        Scoreboarddisplay.setBoard(event.getPlayer(),
+        Scoreboarddisplay.setBoard(player,
                 Temperaturedetect.getTemp(),
                 Temperaturedetect.getState(),
                 Temperaturedetect.getSuggest());
-        if (Integer.getInteger(Temperaturedetect.getTemp()) > 10) {}
+        if (Integer.getInteger(Temperaturedetect.getTemp()) > 10) {Potion.applyEffect(player);}
     }
 }
